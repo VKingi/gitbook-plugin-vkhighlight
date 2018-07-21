@@ -2,7 +2,8 @@ module.exports = {
   website: {
     assets: "./highlight",
     js: [
-      "highlight.pack.less.js"
+		"highlight.pack.less.js",
+		"start.js"
     ],
     css: [
       "default.css",
@@ -12,12 +13,7 @@ module.exports = {
   book: {
   },
   hooks: {
-    "page:before": function(page) {
-      
-      return page;
-    }
     "page": function(page) {
-        page.content += '<script>hljs.initHighlightingOnLoad();</script>';
         return page;
     }
   }
